@@ -1,0 +1,32 @@
+var express = require('express')
+var socket = require('socket.io');
+var port = 3019
+var bodyParser = require('body-parser')
+
+// app setup
+var app = require('express')();
+
+var server = app.listen(port, function(){
+  console.log('listening on localhost:' + port);
+});
+
+//static files
+app.use(express.static('public'))
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+// socket setup
+var io = socket(server)
+
+io.on('connection', function(socket){
+  console.log('made socket connection', socket.id)
+
+  socket.on('chat', function(data){
+    io.sockets.emit('chat', data)
+  })
+
+  socket.on('typing', function(data){
+    socket.broadcast.emit('typing', data)
+  })
+
+});
