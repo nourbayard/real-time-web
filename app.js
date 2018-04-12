@@ -21,6 +21,13 @@ var io = socket(server)
 io.on('connection', function(socket){
   console.log('made socket connection', socket.id)
 
+  // socket.broadcast.emit('newUser', socket.id);
+
+  // socket.on('setUserName', function(name){
+  //   socket.username = name;
+  //   io.sockets.emit('newName', socket.id, socket.username); //Sends message to all sockets
+  // });
+
   socket.on('chat', function(data){
     io.sockets.emit('chat', data)
   })
