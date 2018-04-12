@@ -85,6 +85,14 @@ function cry(text){
             return true;
     }
 
+    // function isCrying(index, string){
+    //     //I DON'T KNOW
+    //     if (index + 10 >= string.length)
+    //         return false;
+    //     if(string.substring(index, index + 10) === "i\'m crying")
+    //         return true;
+    // }
+
     function isWordStart(index, string){
         if (index === (string.length - 1)) return false;
         if (index === 0)
@@ -167,6 +175,13 @@ function cry(text){
             newString += 'tbh';
             i += 11;
         }
+
+        // else if (isCrying(i, text))
+        // {
+        //     newString += 'im ssuu ch a cryy babyb';
+        //     i += 10;
+        // }
+
         // ,,,
         else if (isComma(text[i]))
         {

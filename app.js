@@ -3,13 +3,13 @@ var socket = require('socket.io');
 var port = 3019
 var bodyParser = require('body-parser')
 
-var http = require('http').Server(app)
-var io = require('socket.io')(http)
+// var http = require('http').Server(app)
+// var io = require('socket.io')(http)
 
 // app setup
 var app = require('express')();
 
-var server = http.listen(process.env.PORT || port, function(){
+var server = app.listen(port, function(){
   console.log('listening on localhost:' + port);
 });
 

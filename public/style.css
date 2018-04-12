@@ -3,7 +3,20 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family     : 'Roboto', sans-serif;
+  background-color: lightblue;
+}
+
+::-webkit-scrollbar-thumb {
+  height          : auto;
+  background-color: #8b8a8b;
+}
+
+::-webkit-scrollbar {
+  height          : 9px;
+  width           : 3px;
+  background-color: #eee;
+  margin-right    : 3px;
 }
 
 section:first-of-type {
@@ -12,20 +25,23 @@ section:first-of-type {
 
 h1 {
   letter-spacing: 1px;
+  font-size     : 2em;
 }
 
 #window {
-  /* height    : 200px; */
-  height    : 65vh;
-  overflow  : auto;
-  background: #f9f9f9;
+  min-height   : 200px;
+  height       : 53vh;
+  overflow     : auto;
+  background   : rgba(249, 249, 249, .5);
+  border       : 0;
+  border-radius: 10px 10px 0 0;
 }
 
 #chat {
   width        : 90%;
   max-width    : 550px;
   margin       : 2em auto;
-  border       : 1px solid #ddd;
+  /* border       : 1px solid #ddd; */
   box-shadow   : 1px 2px 5px rgba(0,0,0,0.05);
   border-radius: 2px;
 }
@@ -77,5 +93,5 @@ button {
   border       : 0;
   padding      : 12px 0;
   width        : 100%;
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 10px 10px;
 }
