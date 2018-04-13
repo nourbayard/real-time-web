@@ -3,6 +3,8 @@
 
 Made with socket.io, this app is a real-live chat where "normal" text input gets (a little) distorted as if you had been crying while typing.
 
+[Link to the live demo](https://fast-reaches-34270.herokuapp.com/)
+
 ![img](thing1.png)
 
 ![img](thing2.png)
