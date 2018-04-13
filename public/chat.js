@@ -1,4 +1,6 @@
-var socket = io.connect('http://localhost:3019/')
+// var socket = io.connect('http://localhost:3019/')
+
+var socket = io()
 
 // query dom
 var message = document.getElementById('message')
