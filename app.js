@@ -1,14 +1,15 @@
 const socket = require('socket.io');
 const port = 3019
 const bodyParser = require('body-parser')
+const app = require('express')();
 
-// var http = require('http').Server(app)
+var http = require('http').Server(app)
 // var io = require('socket.io')(http)
 
 // app setup
-const app = require('express')();
 
-var server = app.listen(port, function(){
+
+var server = http.listen(process.env.PORT || port, function(){
   console.log('listening on localhost:' + port);
 });
 
