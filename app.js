@@ -1,13 +1,12 @@
-var express = require('express')
-var socket = require('socket.io');
-var port = 3019
-var bodyParser = require('body-parser')
+const socket = require('socket.io');
+const port = 3019
+const bodyParser = require('body-parser')
 
 // var http = require('http').Server(app)
 // var io = require('socket.io')(http)
 
 // app setup
-var app = require('express')();
+const app = require('express')();
 
 var server = app.listen(port, function(){
   console.log('listening on localhost:' + port);
